@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anushri Gupta — Developer Relations, Docs & Partner Engineering</title>
+<meta name="description" content="Anushri Gupta: DevRel and partner engineering leader, most recently founding DevRel engineer at Mozilla.ai. 20+ years across software engineering, developer docs, developer relations and partner engineering. Remote, Kansas.">
+<meta property="og:title" content="Anushri Gupta — Developer Relations, Docs & Partner Engineering">
+<meta property="og:description" content="Engineer-turned-DevRel leader. Docs, developer communities and partner engineering for developer platforms and open-source AI.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://angpt.github.io/">
+<link rel="canonical" href="https://angpt.github.io/">
+<style>
+  :root{
+    --bg:#fbfaf7; --surface:#ffffff; --ink:#1b1b1f; --muted:#5f6068; --line:#e6e3dc;
+    --accent:#c2410c; --accent-soft:#fff1e8; --chip:#f1eee7;
+    --max:880px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#121214; --surface:#1a1a1e; --ink:#f1f0ec; --muted:#a3a3ab; --line:#2b2b31;
+      --accent:#fb923c; --accent-soft:#2a1d14; --chip:#232328; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:17px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  header.top{display:flex;justify-content:space-between;align-items:center;padding:28px 0 0;font-size:15px}
+  header.top .name{font-weight:650;letter-spacing:.01em;text-decoration:none}
+  header.top nav a{margin-left:20px;color:var(--muted);text-decoration:none}
+  header.top nav a:hover{color:var(--ink)}
+  .hero{padding:72px 0 48px}
+  .eyebrow{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+  h1{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;font-weight:600;
+    font-size:clamp(36px,6vw,58px);line-height:1.08;margin:14px 0 20px;letter-spacing:-.01em}
+  .lede{font-size:clamp(18px,2.4vw,21px);color:var(--muted);max-width:660px;margin:0}
+  .lede strong{color:var(--ink);font-weight:600}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .btn{display:inline-block;padding:11px 18px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;
+    border:1px solid var(--line);background:var(--surface)}
+  .btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .btn:hover{transform:translateY(-1px)}
+  .facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:34px;color:var(--muted);font-size:15px}
+  .facts b{color:var(--ink);font-weight:650}
+  section{padding:44px 0;border-top:1px solid var(--line)}
+  h2{font-family:Georgia,"Iowan Old Style",serif;font-size:28px;font-weight:600;margin:0 0 6px}
+  .sub{color:var(--muted);margin:0 0 26px}
+  /* lenses */
+  .lenses{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .lens{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .lens h3{margin:0 0 6px;font-size:17px}
+  .lens p{margin:0;color:var(--muted);font-size:15.5px}
+  /* filter */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+  .filters button{font:inherit;font-size:14px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);
+    background:var(--surface);color:var(--muted);cursor:pointer}
+  .filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .work{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:22px;text-decoration:none;transition:border-color .15s,transform .15s}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card.hide{display:none}
+  .card h3{margin:0 0 6px;font-size:18px;display:flex;justify-content:space-between;gap:10px}
+  .card h3 span.arrow{color:var(--accent)}
+  .card p{margin:0 0 14px;color:var(--muted);font-size:15.5px;flex:1}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:12.5px;padding:3px 9px;border-radius:999px;background:var(--chip);color:var(--muted)}
+  .tag.on{background:var(--accent-soft);color:var(--accent)}
+  /* timeline */
+  .job{display:grid;grid-template-columns:150px 1fr;gap:6px 24px;padding:16px 0;border-bottom:1px dashed var(--line)}
+  .job:last-child{border-bottom:0}
+  .job .when{color:var(--muted);font-size:14.5px;padding-top:2px}
+  .job h3{margin:0;font-size:17px}
+  .job .org{color:var(--muted);font-weight:400}
+  .job p{margin:4px 0 0;color:var(--muted);font-size:15.5px}
+  .skills{display:flex;flex-wrap:wrap;gap:8px}
+  .skills span{padding:6px 12px;border-radius:999px;background:var(--chip);font-size:14.5px}
+  footer{padding:44px 0 64px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+  footer .links a{margin-right:20px}
+  .contact-big{font-family:Georgia,serif;font-size:clamp(24px,4vw,34px);margin:0 0 14px}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  @media (max-width:720px){
+    .lenses,.work{grid-template-columns:1fr}
+    .job{grid-template-columns:1fr}
+    header.top nav a{margin-left:14px}
+    .hero{padding-top:48px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <a class="name" href="#top">Anushri Gupta</a>
+    <nav aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="eyebrow">Developer relations · Docs · Partner engineering</div>
+      <h1>I help developers succeed with platforms and AI developer tools.</h1>
+      <p class="lede">I'm an engineer-turned-DevRel practitioner with experience across <strong>Mozilla.ai</strong>, <strong>Webflow</strong>, and <strong>Twitch</strong>. I bring software engineering, developer documentation, product feedback, and partner integrations together to help developers go from first experiment to production.</p>
+
+      <div class="facts">
+        <span><b>Based in</b> Kansas </span>
+        <span><b>Most recently</b> Mozilla.ai (open-source AI stack)</span>
+        <span><b>Before</b> Webflow, Twitch / Amazon</span>
+      </div>
+    </div>
+
+    <section aria-labelledby="lenses-h">
+      <h2 id="lenses-h">How I work</h2>
+      <p class="sub">Docs, DevRel and partner engineering overlap a lot in my day-to-day. Here is what each looks like.</p>
+      <div class="lenses">
+        <div class="lens">
+          <h3>Docs &amp; developer education</h3>
+          <p>Docs-as-code, OpenAPI-driven reference, cookbooks and tutorials. I treat documentation as a product with users, structure and metrics.</p>
+        </div>
+        <div class="lens">
+          <h3>Developer relations</h3>
+          <p>Strategy and hands-on execution: SDKs, demos, launch content, community and the funnel that connects them to adoption.</p>
+        </div>
+        <div class="lens">
+          <h3>Partner engineering</h3>
+          <p>Technical lead for partner integrations, from first prototype to production, with a software engineer's credibility in the room.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" aria-labelledby="work-h">
+      <h2 id="work-h">Selected work</h2>
+      <p class="sub">Filter by the kind of role you're hiring for.</p>
+
+      <div class="filters" role="group" aria-label="Filter work by role type">
+        <button type="button" data-f="all" aria-pressed="true">All</button>
+        <button type="button" data-f="docs" aria-pressed="false">Docs</button>
+        <button type="button" data-f="devrel" aria-pressed="false">DevRel</button>
+        <button type="button" data-f="partner" aria-pressed="false">Partner engineering</button>
+      </div>
+
+      <div class="work">
+        <a class="card" data-cats="docs devrel" href="https://docs.mozilla.ai" target="_blank" rel="noopener">
+          <h3>docs.mozilla.ai <span class="arrow">↗</span></h3>
+          <p>One unified documentation platform for Mozilla.ai's open-source portfolio. I migrated eight projects off separate GitHub Pages sites into a single, consistent home.</p>
+          <div class="tags"><span class="tag">Docs</span><span class="tag">Information architecture</span><span class="tag">Open source</span></div>
+        </a>
+
+        <a class="card" data-cats="docs partner" href="https://developers.webflow.com" target="_blank" rel="noopener">
+          <h3>Webflow developer docs <span class="arrow">↗</span></h3>
+          <p>Led the developer docs, built from an OpenAPI spec and hosted on Fern, and the team behind the Webflow JavaScript SDK, which reached about 33k weekly npm downloads.</p>
+          <div class="tags"><span class="tag">OpenAPI</span><span class="tag">Docs-as-code</span><span class="tag">SDK</span></div>
+        </a>
+
+        <a class="card" data-cats="devrel" href="https://github.com/angpt/signalwatch" target="_blank" rel="noopener">
+          <h3>signalwatch <span class="arrow">↗</span></h3>
+          <p>A local-first keyword monitoring tool in Python. I used it daily for my own DevRel work, then open-sourced it.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Open source</span><span class="tag">Tooling</span></div>
+        </a>
+
+        <a class="card" data-cats="devrel partner" href="https://github.com/mozilla-ai/langchain-any-llm" target="_blank" rel="noopener">
+          <h3>langchain-any-llm <span class="arrow">↗</span></h3>
+          <p>A LangChain integration (<code>langchain-anyllm</code> on PyPI) that standardizes the use of multiple LLM providers through LangChain.</p>
+          <div class="tags"><span class="tag">Integration</span><span class="tag">LangChain</span><span class="tag">Python</span></div>
+        </a>
+
+        <a class="card" data-cats="devrel docs" href="https://blog.mozilla.ai/benchmarking-local-llm-servers-llama-cpp-llamafile-lm-studio-and-ollama/" target="_blank" rel="noopener">
+          <h3>Benchmarking Local LLM Servers <span class="arrow">↗</span></h3>
+          <p>A hands-on benchmark of local LLM servers across different hardware, showing how build and runtime configuration matter as much as which server you pick.</p>
+          <div class="tags"><span class="tag">Technical writing</span><span class="tag">Benchmarks</span><span class="tag">llamafile</span></div>
+        </a>
+
+        <a class="card" data-cats="devrel partner" href="https://www.youtube.com/watch?v=5GAgbT-XgHU&list=PLHBh9vhqZcIM" target="_blank" rel="noopener">
+          <h3>AI coding-agent demos <span class="arrow">↗</span></h3>
+          <p>Working demos of AI coding agents, built to show developers what is possible and give partners something concrete to build on.</p>
+          <div class="tags"><span class="tag">Demos</span><span class="tag">Coding agents</span><span class="tag">Developer education</span></div>
+        </a>
+      </div>
+       <p class="sub" style="margin:22px 0 0"><a href="https://blog.mozilla.ai/author/anushri/" target="_blank" rel="noopener">More of my writing on the Mozilla.ai blog ↗</a></p>
+    </section>
+
+    <section id="experience" aria-labelledby="exp-h">
+      <h2 id="exp-h">Experience</h2>
+      <p class="sub">Engineer first, then solutions architecture, partners and developer relations.</p>
+
+      <div class="job">
+        <div class="when">2025 — 2026</div>
+        <div>
+          <h3>Founding DevRel Engineer <span class="org">· Mozilla.ai</span></h3>
+          <p>Ran developer relations across an open-source AI portfolio, spanning LLM tooling, agents, guardrails, and MCP. Built documentation, tutorials, cookbooks, and integrations to help developers evaluate and adopt the projects.</p>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2022 — 2025</div>
+        <div>
+          <h3>Lead Partner Engineering → Manager, Developer Relations <span class="org">· Webflow</span></h3>
+          <p>Progressed from leading partner integrations to managing DevRel. Owned developer documentation, contributed to developer-product launches, and supported the JavaScript SDK and apps ecosystem.</p>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2016 — 2022</div>
+        <div>
+          <h3>Senior Solutions Architect, Developer Relations <span class="org">· Twitch / Amazon</span></h3>
+          <p>Partnered with developers to build and scale integrations using Twitch APIs and platform capabilities. Supported developer programs such as Drops and helped enable interactive experiences that connected streamers, viewers, and developers</p>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2007 — 2016</div>
+        <div>
+          <h3>Software engineering &amp; consulting</h3>
+          <p>Goldman Sachs, Morgan Stanley, Vegas.com and Denim Group. Nearly a decade building and securing production software. </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" aria-labelledby="exp-h">
+      <h2 id="exp-h">Education</h2>
+        <div>MS in Computer Science · Stony Brook University</div>
+      </section>
+
+    <section aria-labelledby="skills-h">
+      <h2 id="skills-h">Toolbox</h2>
+      <p class="sub">Tools and skills I use most.</p>
+      <div class="skills">
+        <span>Developer docs &amp; docs-as-code</span><span>OpenAPI</span><span>SDKs</span><span>Python</span><span>JavaScript / TypeScript</span>
+        <span>LLM gateways &amp; agents</span><span>MCP</span><span>Technical writing</span><span>SEO / AEO / GEO for docs</span>
+        <span>Partner enablement</span><span>Developer communities</span><span>Team leadership</span>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p class="contact-big">Get in touch</p>
+    <p class="links">
+      <a href="https://www.linkedin.com/in/anushrig/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/angpt" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://blog.mozilla.ai/author/anushri/" target="_blank" rel="noopener">Writing</a>
+    </p>
+    <p>© <span id="yr">2026</span> Anushri Gupta </p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var btns = document.querySelectorAll('.filters button');
+  var cards = document.querySelectorAll('.card');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var f = b.getAttribute('data-f');
+      btns.forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      cards.forEach(function(c){
+        var match = f === 'all' || c.getAttribute('data-cats').split(' ').indexOf(f) > -1;
+        c.classList.toggle('hide', !match);
+        c.querySelectorAll('.tag').forEach(function(t){ t.classList.remove('on'); });
+      });
+    });
+  });
+</script>
+<script data-goatcounter="https://YOURCODE.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
